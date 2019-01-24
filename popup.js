@@ -1,9 +1,4 @@
-let changeColor = document.getElementById('changeColor');
-
-chrome.storage.sync.get('color', function (data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
-});
+let getUniqueId = document.querySelector("#getUniqueId")
 
 const copyToClipboard = str => {
   const el = document.createElement('textarea');
@@ -17,8 +12,7 @@ const copyToClipboard = str => {
   document.body.removeChild(el);
 };
 
-changeColor.onclick = function (element) {
-  let color = element.target.value;
+getUniqueId.onclick = function (element) {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     chrome.tabs.executeScript(
       tabs[0].id,
