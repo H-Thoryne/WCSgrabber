@@ -13,11 +13,45 @@
       font-weight: bold;
       cursor: pointer;
     }
+
+    .successText {
+      display: none;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .successText-title {
+      font-weight: bold;
+      color: green;
+    }
+
+    .successText-id {
+      font-size: 14px;
+    }
+
+    .warningText {
+      display: none;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .warningText-title {
+      font-weight: bold;
+      color: red;
+    }
   </style>
 </head>
 
 <body>
   <button id="getUniqueId">Copy Unique ID</button>
+  <div class="successText" id="successText">
+    <div class="successText-title">ID copied!</div>
+    <div class="successText-id" id="successTextID">Test</div>
+  </div>
+  <div class="warningText" id="warningText">
+    <div class="warningText-title">No ID to copy!</div>
+    <div class="warningText-message">If you see this message while there's an ID which could be copied, please contact the developer.</div>
+  </div>
   <script src="popup.js"></script>
 </body>
 
